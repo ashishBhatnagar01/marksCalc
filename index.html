@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: black;
+        }
+        label{
+            width:100px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        fieldset{
+            border-radius: 5px;
+            background-color: rgb(255, 169, 169);
+            padding:20px;
+            border:1px solid lightgray;
+            width: 60%;
+            margin: auto;
+        }
+        legend{
+            font-size: 20px;
+            text-align: center;
+        }
+        fieldset{
+            display: none;
+        }
+         .out{
+            background-color: black;
+            color: white;
+        }
+        h2{
+            text-align: center;
+            font-family: cursive;
+        }
+        button{
+            margin-top: 4%;
+            margin-left:4%;    
+        }
+        label{
+            font-size: 11px;
+        }
+        
+    </style>
+</head>
+<body>
+            <button class="btn btn-primary " >Calculate Result</button>
+        
+    
+    
+    <form>
+        <fieldset>
+            <h2 id="heading"></h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="text-center mt-3">Subjects</h5>
+                    <div class="form-group3">
+                        <label></label>
+                        <input type="number" class="form-control"  placeholder="Marks in Maths: " readonly>
+                    </div>
+                    <div class="form-group3">
+                        <label></label>
+                        <input type="number" class="form-control " placeholder="Marks in Physics: " readonly>
+                    </div>
+                    <div class="form-group3">
+                        <label></label>
+                        <input type="number" class="form-control"  placeholder="Marks in Chemistry:  " readonly>
+                    </div>
+                    <div class="form-group3">
+                        <label></label>
+                        <input type="number" class="form-control "  placeholder="Marks in C++: " readonly>
+                    </div>
+                    <div class="form-group3">
+                        <label></label>
+                        <input type="number" class="form-control "  placeholder="Marks in English: " readonly>
+                    </div>
+                    <div class="form-group3">
+                        <label style="opacity: 0;">gbuig</label>
+                        <input type="number" class="form-control "  placeholder="Result: " readonly>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-center mt-3">Obtained Marks</h5>
+                    <div class="form-group">
+                        <label></label>
+                        <input type="number" class="form-control prc" id="s1">
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <input type="number" class="form-control prc" id="s2">
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <input type="number" class="form-control prc" id="s3">
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <input type="number" class="form-control prc" id="s4">
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <input type="number" class="form-control prc" id="s5">
+                    </div>
+                    <div class="form-group">
+                        <label>Obt Marks</label>
+                        <output id="result" class="form-control out"></output>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-center mt-3">Out Of</h5>
+                    <div class="form-group1">
+                        <label></label>
+                        <input type="number" class="form-control  prc1" id="p1">
+                    </div>
+                    <div class="form-group1">
+                        <label></label>
+                        <input type="number" class="form-control prc1" id="p2">
+                    </div>
+                    <div class="form-group1">
+                        <label></label>
+                        <input type="number" class="form-control prc1" id="p3">
+                    </div>
+                    <div class="form-group1">
+                        <label></label>
+                        <input type="number" class="form-control prc1" id="p4">
+                    </div>
+                    <div class="form-group1">
+                        <label></label>
+                        <input type="number" class="form-control prc1" id="p5">
+                    </div>
+                    <div class="form-group1">
+                        <label>Total Marks</label>
+                        <output id="result1" class="form-control out"></output>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-center mt-3">Percentage</h5>
+                    <div class="form-group2">
+                        <label></label>
+                        <output id="res1" class="form-control out"></output>
+                    </div>
+                    <div class="form-group2">
+                        <label></label>
+                        <output id="res2" class="form-control out"></output>
+                    </div>
+                    <div class="form-group2">
+                        <label></label>
+                        <output id="res3" class="form-control out"></output>
+                    </div>
+                    <div class="form-group2">
+                        <label></label>
+                        <output id="res4" class="form-control out"></output>
+                    </div>
+                    <div class="form-group2">
+                        <label></label>
+                        <output id="res5" class="form-control out"></output>
+                    </div>
+                    <div class="form-group2">
+                        <label>Average Percentage</label>
+                        <output id="result2" class="form-control out"></output>
+                    </div>
+                </div>
+            </div>
+            <script src="jquery.min.js"></script>
+            <script src="calcscript.js"></script>
+        </fieldset>
+    </form>
+</body>
+</html>
